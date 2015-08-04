@@ -11,10 +11,13 @@
 
 	_.prototype = {
 		next: function() {
+			this.prevBoard = cloneArray(this.board);
 
 		},
 		toString: function() {
-
+			return this.board.map(function(row) {
+				return row.join(' ');
+			}).join('\n');
 		}
 	};
 
